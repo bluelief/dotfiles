@@ -1,0 +1,47 @@
+{
+  "workbench.colorTheme": "Dracula Soft",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.eol": "\n",
+  "extensions.ignoreRecommendations": false,
+  "files.associations": {
+      "*.tpl": "html",
+      "*.vue": "javascript",
+      "*.tsx": "javascript",
+      ".bash*": "shellscript",
+      ".gitconfig*": "shellscript",
+  },
+
+  "[javascript]": {
+      "editor.tabSize": 2
+  },
+  "[html]": {
+      "editor.tabSize": 2
+  },
+  "[css]": {
+      "editor.tabSize": 2
+  },
+  "[python]": {
+      "editor.tabSize": 4
+  },
+  "[rust]": {
+      "editor.tabSize": 4
+  },
+  "[shellscript]": {
+      "editor.tabSize": 2
+  },
+  "[go]": {
+      "editor.tabSize": 4,
+      "editor.insertSpaces": false
+  },
+  "[Makefile]": {
+      "editor.tabSize": 4,
+      "editor.insertSpaces": false
+  },
+  "editor.fontSize": 20,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+  "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.fontSize": 20,
+  "javascript.validate.enable": false,
+}

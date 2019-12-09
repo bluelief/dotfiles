@@ -1,0 +1,28 @@
+# git branch
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+# python venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# bash prompt color
+function bash_option {
+  HEADER="on \e[32m"
+  PY_VIRTUAL_ENV=""
+  GIT_BRANCH=`parse_git_branch`
+  if [ -n "$VIRTUAL_ENV" ]; then
+    PY_VIRTUAL_ENV="`basename \"$VIRTUAL_ENV\"`"
+  fi
+
+  if [ -n "$GIT_BRANCH" ] && [ -n "$VIRTUAL_ENV" ]; then
+    echo -en "${HEADER}(${GIT_BRANCH}/${PY_VIRTUAL_ENV})"
+  elif [ -n "$GIT_BRANCH" ]; then
+    echo -en "${HEADER}(${GIT_BRANCH})"
+  elif [ -n "$VIRTUAL_ENV" ]; then
+    echo -en "${HEADER}(${PY_VIRTUAL_ENV})"
+  fi
+}
+
+# prompt
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[00m\] at \[\033[01;35m\]\h\[\033[00m\] in \[\033[01;33m\]\W\[\033[00m\] $(bash_option) \[\033[00m\]\[\033[01;31m\]>\[\e[01;33m\]>\[\033[01;32m\]>\[\033[m\] \[\e[1;37m\] '
