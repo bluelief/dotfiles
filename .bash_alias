@@ -1,0 +1,67 @@
+#update
+alias aimerup="$HOME/package/dotfiles/update.sh"
+
+# alias
+alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"
+alias lstats="stat --printf='%a %A %10U %10G %20F %n\n'"
+alias lgrep="stat --format='%a %A %10U %10G %20F %n' ./* .* | grep"
+alias pwdc='pwd | tr -d "\n" | pbcopy'
+alias allps="ps aux"
+
+# ls
+alias ls="ls --color=auto"
+alias ll="ls -alF"
+alias l="clear && ll"
+
+# cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ~="cd ~"
+
+# cp/mv/rm
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# VSCode
+alias vscode="code-insiders ."
+
+# tar
+alias tarxz="tar Jxf"
+alias targz="tar zxf"
+
+# git
+alias gitinit="git commit --allow-empty -m 'Init commit'"
+alias gitchmod="git update-index --add --chmod=+x"
+
+# python venv
+alias venvon=". bin/activate"
+alias venvoff="deactivate"
+
+# alphabet
+alias a="apt"
+alias b="echo 'Not setting yet'"
+alias c="cat"
+alias d="less"
+alias e="vim"
+alias f="find . -name"
+alias g="grep --color=auto"
+alias h="echo 'Not setting yet'"
+alias i="sudo apt install --yes"
+alias j="echo 'Not setting yet'"
+alias k="kill -9"
+###alias l
+alias n="npm"
+alias o="open"
+alias p="python"
+alias q="exit"
+alias r="rm -i"
+alias s="git status"
+alias t="tree -C"
+alias u="cd .."
+alias v="vim"
+alias w="echo 'Not setting yet'"
+alias x="exit"
+alias y="echo 'Not setting yet'"
+alias z="echo 'Not setting yet'"

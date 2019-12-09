@@ -1,0 +1,37 @@
+# path to little scripts
+export PATH="$HOME/.local/bin:$PATH"
+
+# default editor
+export EDITOR='vim'
+
+# openssl
+export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
+export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+
+
+# Programming language
+
+## Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+## node
+export PATH="$HOME/.local/lang/node/bin:$PATH"
+
+## Golang
+export GOROOT="$HOME/.local/lang/go"
+export GOPATH=""
+export PATH=$GOROOT/bin:$PATH
+export GO111MODULE=on
+
+## Python
+export PYENV_ROOT="$HOME/.local/lang/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+## Ruby
+export PATH="$HOME/.local/lang/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+
+# gpg git
+export GPG_TTY=$(tty)
