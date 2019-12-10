@@ -1,5 +1,6 @@
 #update
 alias aimerup="$HOME/package/dotfiles/update.sh"
+alias aimercp="$HOME/package/dotfiles/copy.sh"
 
 # alias
 alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"
@@ -65,3 +66,4 @@ alias w="echo 'Not setting yet'"
 alias x="exit"
 alias y="echo 'Not setting yet'"
 alias z="echo 'Not setting yet'"
+
