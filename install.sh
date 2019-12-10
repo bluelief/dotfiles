@@ -38,7 +38,7 @@ echo "[+] Create dir"
 
 ## cope/dotfilesfiles
 git clone https://github.com/aimergirls/dotfiles.git package/dotfiles
-rsync -av package/dotfiles/. $HOME/ \
+rsync -av $HOME/package/dotfiles/. $HOME/ \
 --exclude "*.sh" --exclude ".gitignore" --exclude "LICENSE" --exclude "README.md" \
 --exclude "/.git/" --exclude "/program/" --exclude "/windows/"
 sudo chmod 600 $HOME/.ssh/config
