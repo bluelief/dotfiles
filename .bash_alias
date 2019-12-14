@@ -1,5 +1,5 @@
 #update
-alias aimerup="$HOME/package/dotfiles/update.sh"
+alias aimerup="$HOME/package/dotfiles/update.sh && . $HOME/.bash_profile"
 alias aimercp="$HOME/package/dotfiles/copy.sh"
 
 # alias
