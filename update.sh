@@ -8,6 +8,7 @@ CURRENT_DIR=$(pwd)
 sudo apt -y update && sudo apt -y upgrade
 
 # Update this repository
+cd $HOME/package/dotfiles
 git pull
 
 # Copy config files
