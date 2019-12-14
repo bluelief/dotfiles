@@ -18,6 +18,7 @@ rsync -av $HOME/package/dotfiles/. $HOME/ \
 --exclude "/.git/" --exclude "/program/" --exclude "/windows/"
 cp $HOME/.gitconfig.aimergirls.bk $HOME/.gitconfig.aimergirls
 cp $HOME/.ssh/config.bk $HOME/.ssh/config
+sudo chmod 600 $HOME/.ssh/config
 echo "[+] Done. Copy config files."
 
 
