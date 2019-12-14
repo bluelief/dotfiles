@@ -1,18 +1,9 @@
-" vim-plug
-call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula'}
-call plug#end()
-
 " General
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set smartindent
-
-" Scheme
-syntax on
-color dracula
 
 set title
 
@@ -42,3 +33,39 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab
 augroup END
+
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'dracula/vim', { 'as': 'dracula'}
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
+
+" dracula/vim Scheme {{{
+syntax on
+color dracula
+" }}}
+
+" vim-airline/vim-airline {{{
+let g:airline_theme = 'wombat'
+set laststatus=2
+" Show branch name
+let g:airline#extensions#branch#enabled = 1
+" Show buffer's filename
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
+let g:airline_section_c = '%t'
+let g:airline_section_x = '%{&filetype}'
+let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = ' '
+let g:airline#extensions#default#section_truncate_width = {}
+" Check whitespace at end of line
+let g:airline#extensions#whitespace#enabled = 1
+" }}}
