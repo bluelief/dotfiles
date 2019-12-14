@@ -37,8 +37,9 @@ alias gitinit="git commit --allow-empty -m 'Init commit'"
 alias gitchmod="git update-index --add --chmod=+x"
 
 # python venv
-alias venvon=". bin/activate"
-alias venvoff="deactivate"
+alias von=". bin/activate"
+alias voff="deactivate"
+alias vdev=". .venv/dev/bin/activate"
 
 # alphabet
 alias a="apt"
