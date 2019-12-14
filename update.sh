@@ -5,7 +5,7 @@
 CURRENT_DIR=$(pwd)
 
 # Update linux
-sudo apt update && sudo apt upgrade
+sudo apt -y update && sudo apt -y upgrade
 
 # Update this repository
 git pull
