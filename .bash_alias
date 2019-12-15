@@ -1,6 +1,6 @@
 #update
 alias aimerup="$HOME/package/dotfiles/update.sh && . $HOME/.bash_profile"
-alias aimercp="$HOME/package/dotfiles/copy.sh"
+alias aimercp="$HOME/package/dotfiles/copy.sh && . $HOME/.bash_profile"
 
 # alias
 alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"
@@ -35,6 +35,14 @@ alias targz="tar zxf"
 # git
 alias gitinit="git commit --allow-empty -m 'Init commit'"
 alias gitchmod="git update-index --add --chmod=+x"
+alias ga="git add"
+alias gb="git branch -a"
+alias gc="git commit"
+alias gs="git status"
+alias gp="git push"
+alias gco="git checkout"
+alias gpat="git reset --hard HEAD^ && git am --3way ./patch/$@"
+alias gsign="gitsign"
 
 # python venv
 alias von=". bin/activate"
@@ -67,4 +75,3 @@ alias w="echo 'Not setting yet'"
 alias x="exit"
 alias y="echo 'Not setting yet'"
 alias z="echo 'Not setting yet'"
-
