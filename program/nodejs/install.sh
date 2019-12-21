@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# Check newest version
-NODEJS_BASEURL="https://nodejs.org/download/release/latest/"
-LATEST_VERSION=`curl -s "https://nodejs.org/download/release/latest/" --list-only | grep linux-x64.tar.xz | awk -F'['\''"]' '{print $2}'`
+git clone https://github.com/nodenv/nodenv.git $HOME/.local/lang/nodenv
+cd $HOME/.local/lang/nodenv && src/configure && make -C src
 
-DOWNLOAD_URL=$NODEJS_BASEURL$LATEST_VERSION
+source $HOME/.bash_profile
 
-wget $DOWNLOAD_URL -O node.tar.xz
-mkdir -p ~/.local/lang/node
-tar Jxfv ./node.tar.xz -C ~/.local/lang/node --strip-components 1 > /dev/null 2>&1
-rm -f ./node.tar.xz
-
-npm install -g yarn
+mkdir -p "$(nodenv root)"/plugins
+git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-build"
+git clone https://github.com/pine/nodenv-yarn-install.git "$(nodenv root)/plugins/nodenv-yarn-install"
 
 echo "[+] Done. Installed nodejs."
