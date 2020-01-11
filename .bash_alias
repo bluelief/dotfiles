@@ -16,8 +16,8 @@ alias dc="docker-compose"
 alias dcu="docker-compose -p docker up -d"
 alias dcd="docker-compose -p docker down"
 alias dcs="docker-compose -p docker stop"
-dce() { docker-compose -p docker exec $1 bash; }
-de() { docker exec -it $1 bash; }
+dce() { docker-compose -p docker exec $1 /bin/bash; }
+de() { docker exec -it $1 /bin/bash --login; }
 alias drmi="docker rmi"
 alias drm="docker rm"
 alias di="docker images"
