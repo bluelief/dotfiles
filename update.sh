@@ -15,7 +15,7 @@ git pull
 cp $HOME/.gitconfig $HOME/.gitconfig.bk
 cp $HOME/.ssh/config $HOME/.ssh/config.bk
 rsync -av $HOME/package/dotfiles/. $HOME/ \
---exclude "*.sh" --exclude ".gitignore" --exclude "LICENSE" --exclude "README.md" \
+--exclude "*.sh" --exclude ".gitignore" --exclude "LICENSE" --exclude "*.md" \
 --exclude "/.git/" --exclude "/program/" --exclude "/windows/"
 cp $HOME/.gitconfig.bk $HOME/.gitconfig
 cp $HOME/.ssh/config.bk $HOME/.ssh/config
