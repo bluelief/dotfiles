@@ -37,16 +37,16 @@ augroup END
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula'}
+Plug 'haishanh/night-owl.vim', { 'as': 'night-owl'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-" dracula/vim Scheme {{{
+" night-owl/vim Scheme {{{
 syntax on
-color dracula
+color night-owl
 " }}}
 
 " vim-airline/vim-airline {{{
