@@ -37,7 +37,7 @@ mkdir -p $HOME/package
 echo "[+] Create dir"
 
 ## cope/dotfilesfiles
-git clone https://github.com/aimergirls/dotfiles.git package/dotfiles
+git clone https://github.com/bluelief/dotfiles.git package/dotfiles
 rsync -av $HOME/package/dotfiles/. $HOME/ \
 --exclude "*.sh" --exclude ".gitignore" --exclude "LICENSE" --exclude "*.md" \
 --exclude "/.git/" --exclude "/program/" --exclude "/windows/"
