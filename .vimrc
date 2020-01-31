@@ -7,6 +7,8 @@ set smartindent
 
 set title
 
+set paste
+
 " Encoding
 set encoding=utf-8
 scriptencoding utf-8
