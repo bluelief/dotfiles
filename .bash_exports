@@ -12,7 +12,9 @@ export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 # Programming language
 
 ## Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+export CARGO_HOME="$HOME/.local/lang/cargo"
+export RUSTUP_HOME="$HOME/.local/lang/rustup"
+export PATH="$CARGO_HOME/bin:$PATH"
 
 ## node
 export NODENV_ROOT="$HOME/.local/lang/nodenv"
