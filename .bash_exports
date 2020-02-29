@@ -23,7 +23,7 @@ eval "$(nodenv init -)"
 
 ## Golang
 export GOROOT="$HOME/.local/lang/go"
-export GOPATH=""
+export GOPATH="$HOME/.local/lang/go_path"
 export PATH=$GOROOT/bin:$PATH
 export GO111MODULE=on
 
