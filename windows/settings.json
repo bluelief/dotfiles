@@ -1,47 +1,58 @@
 {
-  "workbench.colorTheme": "Dracula Soft",
-  "workbench.iconTheme": "material-icon-theme",
-  "files.eol": "\n",
-  "extensions.ignoreRecommendations": false,
-  "files.associations": {
+    "workbench.colorTheme": "Night Owl",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.eol": "\n",
+    "files.autoGuessEncoding": true,
+    "extensions.ignoreRecommendations": false,
+    "files.associations": {
       "*.tpl": "html",
       "*.vue": "javascript",
-      "*.tsx": "javascript",
+      "*.ts": "typescript",
+      "*.tsx": "typescriptreact",
       ".bash*": "shellscript",
-      ".gitconfig*": "shellscript",
-  },
-
-  "[javascript]": {
+      ".gitconfig*": "shellscript"
+    },
+    "[javascript]": {
       "editor.tabSize": 2
-  },
-  "[html]": {
+    },
+    "[typescirpt]": {
       "editor.tabSize": 2
-  },
-  "[css]": {
+    },
+    "[typescirptreact]": {
       "editor.tabSize": 2
-  },
-  "[python]": {
+    },
+    "[html]": {
+      "editor.tabSize": 2
+    },
+    "[css]": {
+      "editor.tabSize": 2
+    },
+    "[python]": {
       "editor.tabSize": 4
-  },
-  "[rust]": {
+    },
+    "[rust]": {
       "editor.tabSize": 4
-  },
-  "[shellscript]": {
+    },
+    "[shellscript]": {
       "editor.tabSize": 2
-  },
-  "[go]": {
+    },
+    "[go]": {
       "editor.tabSize": 4,
       "editor.insertSpaces": false
-  },
-  "[Makefile]": {
+    },
+    "[Makefile]": {
       "editor.tabSize": 4,
       "editor.insertSpaces": false
-  },
-  "editor.fontSize": 20,
-  "editor.tabSize": 2,
-  "editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
-  "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.fontSize": 20,
-  "javascript.validate.enable": false,
-}
+    },
+    "[json]": {
+      "editor.tabSize": 4
+    },
+    "editor.fontSize": 20,
+    "editor.tabSize": 4,
+    "editor.fontFamily": "'Cascadia Code', 'Noto Sans JP', 'Fira Code', Consolas, 'Courier New', monospace",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.fontSize": 20,
+    "javascript.validate.enable": false,
+    "typescript.updateImportsOnFileMove.enabled": "always"
+  }

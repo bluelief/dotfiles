@@ -1,6 +1,6 @@
 #update
-alias aimerup="$HOME/package/dotfiles/update.sh && . $HOME/.bash_profile"
-alias aimercp="$HOME/package/dotfiles/copy.sh && . $HOME/.bash_profile"
+alias ieup="$HOME/package/dotfiles/update.sh && . $HOME/.bash_profile"
+alias iecp="$HOME/package/dotfiles/copy.sh && . $HOME/.bash_profile"
 
 # alias
 alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"

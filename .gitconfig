@@ -1,7 +1,6 @@
 [user]
-  name = Bluelief
-  email = 33663724+bluelief@users.noreply.github.com
-  signingkey =  
+  name = testuser
+  email = test@example.com
 
 [url "github:"]
   pushInsteadOf = https://github.com/
@@ -38,7 +37,6 @@
   ui = auto
 
 [commit]
-  gpgsign = true
   template = ~/.gitmessage
 
 [trailer "author"]
