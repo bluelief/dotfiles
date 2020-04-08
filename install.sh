@@ -40,12 +40,12 @@ echo "[+] Create dir"
 git clone https://github.com/bluelief/dotfiles.git package/dotfiles
 rsync -av $HOME/package/dotfiles/. $HOME/ \
 --exclude "*.sh" --exclude ".gitignore" --exclude "LICENSE" --exclude "*.md" \
---exclude "/.git/" --exclude "/program/" --exclude "/windows/"
-sudo chmod 600 $HOME/.ssh/config
+--exclude "/.git/" --exclude "/program/" --exclude "/windows/" --exclude "/.ssh/"
 echo "[+] Copy the/dotfiles files."
 
 ## set vim-plug
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo | vim +PlugInstall +qall
 
 ## Set workdir
 WORKDIR=`pwd`
