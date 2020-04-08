@@ -58,13 +58,13 @@ cd package/dotfiles/program/rust && ./install.sh && cd $WORKDIR
 ## Python
 cd package/dotfiles/program/python && ./install.sh && cd $WORKDIR
 
-## nodejs
-cd package/dotfiles/program/nodejs && ./install.sh && cd $WORKDIR
-
 ## golang
 cd package/dotfiles/program/golang && ./install.sh && cd $WORKDIR
 
 ## Ruby
 cd package/dotfiles/program/ruby && ./install.sh && cd $WORKDIR
+
+## nodejs
+cd package/dotfiles/program/nodejs && ./install.sh && cd $WORKDIR
 
 echo "[+] Complete"
