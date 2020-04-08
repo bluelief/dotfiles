@@ -10,8 +10,6 @@ alias pwdc='pwd | tr -d "\n" | pbcopy'
 alias allps="ps aux"
 
 # docker
-alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
 alias dc="docker-compose"
 alias dcu="docker-compose -p docker up -d"
 alias dcd="docker-compose -p docker down"
