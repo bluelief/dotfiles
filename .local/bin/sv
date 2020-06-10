@@ -4,15 +4,19 @@ docker container run \
   --net=bridge \
   -v $HOME/.ssh:/home/stellvia/.ssh \
   -v $HOME/.gnupg:/home/stellvia/.gnupg \
+  -v $HOME/.dotfiles:/home/stellvia/.dotfiles:ro \
   -v $HOME/.bash_profile:/home/stellvia/.bash_profile:ro \
   -v $HOME/.bash_alias:/home/stellvia/.bash_alias:ro \
   -v $HOME/.bash_prompt:/home/stellvia/.bash_prompt:ro \
-  -v $HOME/.bash_exports:/home/stellvia/.bash_exports:ro \
+  -v $HOME/.bash_export:/home/stellvia/.bash_export:ro \
   -v $HOME/.gitconfig:/home/stellvia/.gitconfig:ro \
   -v $HOME/.gitconfig.user:/home/stellvia/.gitconfig.user:ro \
   -v $HOME/.gitmessage:/home/stellvia/.gitmessage:ro \
   -v $HOME/.vimrc:/home/stellvia/.vimrc:ro \
   -v $HOME/.vim:/home/stellvia/.vim \
+  -v security:/home/stellvia/package/security \
+  -v develop:/home/stellvia/dev \
+  -v venv:/home/stellvia/.venv \
   -w /home/stellvia \
   -it --rm \
   -e TZ=Asia/Tokyo \
