@@ -1,7 +1,5 @@
-[user]
-  name = Bluelief
-  email = 33663724+bluelief@users.noreply.github.com
-  signingkey =  
+[include]
+  path = ~/.gitconfig.user
 
 [url "github:"]
   pushInsteadOf = https://github.com/

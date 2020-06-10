@@ -1,6 +1,5 @@
 #update
-alias aimerup="$HOME/package/dotfiles/update.sh && . $HOME/.bash_profile"
-alias aimercp="$HOME/package/dotfiles/copy.sh && . $HOME/.bash_profile"
+alias dotup="`cat $HOME/.dotfiles`/update.sh && . $HOME/.bash_profile"
 
 # alias
 alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"
@@ -38,7 +37,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ~="cd ~"
-alias dotfiles="$HOME/package/dotfiles"
+alias dotfiles="cd `cat $HOME/.dotfiles`"
 
 # cp/mv/rm
 alias cp='cp -i'
