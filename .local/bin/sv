@@ -2,6 +2,7 @@
 
 docker container run \
   --net=bridge \
+  --net=msfdb \
   -v $HOME/.ssh:/home/stellvia/.ssh \
   -v $HOME/.gnupg:/home/stellvia/.gnupg \
   -v $HOME/.dotfiles:/home/stellvia/.dotfiles:ro \

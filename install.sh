@@ -26,12 +26,15 @@ if [ -z "$IS_DOCKER" ]; then
   sudo apt -y update && sudo apt -y upgrade
 
   setup-devtools
-
-  # setup directory
-  mkdir -p $HOME/.local/usr
-  mkdir -p $HOME/.local/bin
-  mkdir -p $HOME/.local/share
 fi
+
+# setup directory
+mkdir -p $HOME/.local/usr
+mkdir -p $HOME/.local/bin
+mkdir -p $HOME/.local/share
+ln -s $FILE_DIR/.local/share/vimplug $HOME/.vim
+ln -s $FILE_DIR/.local/bin/gitsign $HOME/.local/bin/gitsign
+ln -s $FILE_DIR/.local/bin/sv $HOME/.local/bin/sv
 
 ## setup vim-plug
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
