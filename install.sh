@@ -1,45 +1,42 @@
 #!/bin/bash
 
-# Update
-sudo apt -y update && sudo apt -y upgrade
+setup-devtools () {
+  ## editor
+  sudo apt -y install vim
 
-#  Develop tools
-## editor
-sudo apt -y install vim
+  ## version control
+  sudo apt -y install git
 
-## version control
-sudo apt -y install git
+  ## Secure Shell
+  sudo apt -y install ssh
 
-## Secure Shell
-sudo apt -y install ssh
+  ## misc
+  sudo apt -y install wget
 
-## misc
-sudo apt -y install wget
+  ## tar
+  sudo apt -y install xz-utils
 
-## tar
-sudo apt -y install xz-utils
+  ## secure
+  sudo apt -y install gpg
+}
 
-## secure
-sudo apt -y install gpg
+## Initial setup not docker
+if [ -z "$IS_DOCKER" ]; then
+  # Update
+  sudo apt -y update && sudo apt -y upgrade
 
+  setup-devtools
 
-# Usee/dotfiles
-## Create dir
-mkdir -p $HOME/.local/bin
-mkdir -p $HOME/.local/lang
-mkdir -p $HOME/.local/usr
-mkdir -p $HOME/.vim
-mkdir -p $HOME/dev
-mkdir -p $HOME/tmp
-mkdir -p $HOME/package
-echo "[+] Create dir"
-
+  # setup directory
+  mkdir -p $HOME/.local/usr
+  mkdir -p $HOME/.local/bin
+  mkdir -p $HOME/.local/share
+fi
 
 ## setup vim-plug
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo | vim +PlugInstall +qall
 echo "[+] Vim plug installed"
-
 
 ## setup docker
 FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
