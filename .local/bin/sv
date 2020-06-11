@@ -23,6 +23,7 @@ docker container run \
   -w /home/stellvia \
   -it --rm \
   -e TZ=Asia/Tokyo \
+  -e TERM=xterm-256color \
   -e IS_DOCKER=true \
   --user $DOCKER_USER \
   --name stellvia \
