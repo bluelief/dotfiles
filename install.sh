@@ -36,12 +36,15 @@ ln -s $FILE_DIR/.local/share/vimplug $HOME/.vim
 ln -s $FILE_DIR/.local/bin/gitsign $HOME/.local/bin/gitsign
 ln -s $FILE_DIR/.local/bin/sv $HOME/.local/bin/sv
 
-## setup vim-plug
+# dotfiledire
+echo $(cd $(dirname $BASH_SOURCE); pwd) > $HOME/.local/.dotfiles
+
+# setup vim-plug
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo | vim +PlugInstall +qall
 echo "[+] Vim plug installed"
 
-## setup docker
+# setup docker
 FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
 DOCKER=`apt list --installed 2>/dev/null | grep docker.io`
 

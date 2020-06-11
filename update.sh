@@ -3,7 +3,7 @@
 # Set current dir
 CURRENT_DIR=$(pwd)
 
-DOTFILES=`cat $HOME/.dotfiles`
+DOTFILES=`cat $HOME/.local/.dotfiles`
 
 # Update linux
 sudo apt -y update && sudo apt -y upgrade
