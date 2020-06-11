@@ -13,13 +13,13 @@ docker container run \
   -v $HOME/.gitconfig.user:/home/stellvia/.gitconfig.user:ro \
   -v $HOME/.gitmessage:/home/stellvia/.gitmessage:ro \
   -v $HOME/.vimrc:/home/stellvia/.vimrc:ro \
-  -v $HOME/.vim:/home/stellvia/.vim \
-  -v security:/home/stellvia/package/security \
+  -v package:/home/stellvia/package \
   -v develop:/home/stellvia/dev \
-  -v venv:/home/stellvia/.venv \
+  -v local:/home/stellvia/.local \
   -w /home/stellvia \
   -it --rm \
   -e TZ=Asia/Tokyo \
+  -e IS_DOCKER=true \
   --user stellvia \
   --name stellvia \
   --hostname foundationII \
