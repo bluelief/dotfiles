@@ -7,8 +7,12 @@ export DOTFILES=$HOME/package/dotfiles \
     git \
     curl \
   && git clone https://github.com/bluelief/dotfiles/dotfiles.git $DOTFILES \
-  && $DOTFILES/install.sh \
-  && $DOTFILES/setup.sh
+  && $DOTFILES/install.sh
+```
+
+
+```sh
+curl https://raw.githubusercontent.com/bluelief/dotfiles/master/setup.sh -sSf | bash
 ```
 
 
