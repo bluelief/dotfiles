@@ -29,6 +29,7 @@ if [ -z "$IS_DOCKER" ]; then
 fi
 
 # setup directory
+FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
 mkdir -p $HOME/.local/usr
 mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.local/share
