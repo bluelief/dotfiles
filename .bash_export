@@ -8,6 +8,14 @@ export EDITOR='vim'
 export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
 export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 
+# postgresql
+export PATH="/usr/lib/postgresql/12/bin:$PATH"
+
+# Security tools
+export PATH="$HOME/.local/usr/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="$HOME/package/security/metasploit-framework:$PATH"
+export PATH="$HOME/package/security/metasploit-framework/tools/exploit:$PATH"
 
 # Programming language
 

@@ -13,7 +13,7 @@ if [  $# == 2 ]; then
 fi
 
 docker container run \
-  --net=bridge \
+  --net=stellvia \
   -v $HOME/.ssh:/home/stellvia/.ssh \
   -v $HOME/.gnupg:/home/stellvia/.gnupg \
   -v $HOME/.gitconfig.user:/home/stellvia/.gitconfig.user:ro \
