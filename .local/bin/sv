@@ -14,12 +14,11 @@ fi
 
 docker container run \
   --net=stellvia \
-  -v $HOME/.ssh:/home/stellvia/.ssh \
-  -v $HOME/.gnupg:/home/stellvia/.gnupg \
   -v $HOME/.gitconfig.user:/home/stellvia/.gitconfig.user:ro \
   -v package:/home/stellvia/package \
   -v develop:/home/stellvia/dev \
   -v local:/home/stellvia/.local \
+  -v visualarts:/home/stellvia/.visualarts \
   -w /home/stellvia \
   -it --rm \
   -e TZ=Asia/Tokyo \
