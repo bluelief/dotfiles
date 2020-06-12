@@ -3,11 +3,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set smartindent
+set autoindent
 
 set title
-
-set paste
 
 " Encoding
 set encoding=utf-8
@@ -16,6 +14,9 @@ scriptencoding utf-8
 " Search
 set noignorecase
 set wrapscan
+
+filetype on
+filetype plugin indent on
 
 " File Types
 augroup fileTypeIndent
@@ -34,6 +35,10 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.tsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!/bin/bash.*' | set filetype=bash | endif
+  autocmd BufRead,BufNewFile * nested if @% == '\.' | set filetype=bash | endif
+  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*python.*' | set filetype=python | endif
+  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*ruby.*' | set filetype=python | endif
 augroup END
 
 
@@ -57,7 +62,7 @@ endif
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'haishanh/night-owl.vim', { 'as': 'night-owl'}
+Plug 'haishanh/night-owl.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
