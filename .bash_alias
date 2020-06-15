@@ -66,7 +66,7 @@ alias gsign="gitsign"
 # python venv
 alias von=". bin/activate"
 alias voff="deactivate"
-alias vdev=". .venv/dev/bin/activate"
+alias vdev=". .local/share/venv/dev/bin/activate"
 
 # alphabet
 alias a="apt"
