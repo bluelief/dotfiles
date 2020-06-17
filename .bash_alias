@@ -59,9 +59,23 @@ alias gb="git branch -a"
 alias gc="git commit"
 alias gs="git status"
 alias gp="git push"
+alias gpm="git push origin master"
+alias gpf="git push -f"
+alias gpfm="git push -f origin master"
 alias gco="git checkout"
 alias gpat="git reset --hard HEAD^ && git am --3way ./patch/$@"
 alias gsign="gitsign"
+
+# gpg
+## Expire
+## gedit XXXX
+## key YYYY(Sub key)
+## expire
+## save
+alias glist="gpg --list-keys --keyid-format LONG"
+alias gedit="gpg --expert --edit-key"
+alias ggen="gpg --expert --full-gen-key"
+alias ggrip="gpg --with-keygrip --list-key"
 
 # python venv
 alias von=". bin/activate"
@@ -72,7 +86,7 @@ alias vdev=". .local/share/venv/dev/bin/activate"
 alias a="apt"
 alias b="echo 'Not setting yet'"
 alias c="cat"
-alias d="sudo docker"
+alias d="docker"
 alias e="vim"
 alias f="find . -name"
 alias g="grep --color=auto"
