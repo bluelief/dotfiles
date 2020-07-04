@@ -4,6 +4,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
+set paste
 
 set title
 
@@ -38,7 +39,7 @@ augroup fileTypeIndent
   autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!/bin/bash.*' | set filetype=bash | endif
   autocmd BufRead,BufNewFile * nested if @% == '\.' | set filetype=bash | endif
   autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*python.*' | set filetype=python | endif
-  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*ruby.*' | set filetype=python | endif
+  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*ruby.*' | set filetype=ruby | endif
 augroup END
 
 
