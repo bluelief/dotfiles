@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PYTHON_VER="3.8.3"
-GOPACKAGE="go1.14.4.linux-amd64.tar.gz"
-NODE_VER="14.4.0"
+PYTHON_VER="3.8.5"
+GOPACKAGE="go1.15.2.linux-amd64.tar.gz"
+NODE_VER="14.10.1"
 
 PREFIX=$HOME/.local/usr
 
