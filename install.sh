@@ -33,6 +33,7 @@ FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
 mkdir -p $HOME/.local/usr
 mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.local/share/vimplug
+mkdir -p $HOME/.local/usr/msf4
 ln -s $FILE_DIR/.local/bin/gitsign $HOME/.local/bin/gitsign
 ln -s $FILE_DIR/.local/bin/sv $HOME/.local/bin/sv
 

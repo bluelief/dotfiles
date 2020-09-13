@@ -11,5 +11,6 @@ ln -s $FILE_DIR/.gitconfig $HOME/.gitconfig
 ln -s $FILE_DIR/.gitmessage $HOME/.gitmessage
 ln -s $FILE_DIR/.vimrc $HOME/.vimrc
 ln -s $HOME/.local/share/vimplug $HOME/.vim
+ln -s $HOME/.local/usr/msf4 $HOME/.msf4
 ln -s $HOME/.visualarts/.gnupg $HOME/.gnupg
 ln -s $HOME/.visualarts/.ssh $HOME/.ssh
