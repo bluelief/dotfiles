@@ -1,0 +1,30 @@
+#!/bin/bash
+
+DOCKER_USER="stellvia"
+DOCKER_SCRIPT="--login"
+
+if [ $# == 1 ]; then
+  DOCKER_USER=$1
+fi
+
+if [  $# == 2 ]; then
+  DOCKER_USER=$1
+  DOCKER_SCRIPT=$2
+fi
+
+docker container run \
+  --net=stellvia \
+  -v kernel:/home/stellvia/kernel \
+  -v /tmp:/home/stellvia/tmp \
+  -w /home/stellvia \
+  -it --rm \
+  -e TZ=Asia/Tokyo \
+  -e TERM=xterm-256color \
+  -e IS_DOCKER=true \
+  --user $DOCKER_USER \
+  --name stellvia \
+  --hostname foundationII \
+  stellvia/ubuntu-kernelbuild:latest \
+  /bin/bash $DOCKER_SCRIPT
+
+
