@@ -22,7 +22,7 @@ docker container run \
   -e TERM=xterm-256color \
   -e IS_DOCKER=true \
   --user $DOCKER_USER \
-  --name stellvia \
+  --name kernel-build \
   --hostname foundationII \
   stellvia/ubuntu-kernelbuild:latest \
   /bin/bash $DOCKER_SCRIPT
