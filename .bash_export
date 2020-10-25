@@ -17,6 +17,10 @@ export PATH="/usr/sbin:$PATH"
 export PATH="$HOME/package/security/metasploit-framework:$PATH"
 export PATH="$HOME/package/security/metasploit-framework/tools/exploit:$PATH"
 
+# VSCode
+export PATH="/mnt/d/Program/application/Microsoft VS Code Insiders/bin:$PATH"
+
+
 # Programming language
 
 ## Rust
