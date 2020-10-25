@@ -9,6 +9,7 @@ ln -s $FILE_DIR/.bash_export $HOME/.bash_export
 ln -s $FILE_DIR/.bash_prompt $HOME/.bash_prompt
 ln -s $FILE_DIR/.gitconfig $HOME/.gitconfig
 ln -s $FILE_DIR/.gitmessage $HOME/.gitmessage
+ln -s $FILE_DIR/.local/bin $HOME/.local/bin
 ln -s $FILE_DIR/.vimrc $HOME/.vimrc
 ln -s $HOME/.local/share/vimplug $HOME/.vim
 ln -s $HOME/.local/usr/msf4 $HOME/.msf4
