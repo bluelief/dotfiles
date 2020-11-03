@@ -31,7 +31,6 @@ fi
 # setup directory
 FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
 mkdir -p $HOME/.local/usr
-mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.local/share/vimplug
 mkdir -p $HOME/.local/usr/msf4
 
@@ -45,10 +44,11 @@ echo "[+] Vim plug installed"
 
 # setup docker
 FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
-DOCKER=`apt list --installed 2>/dev/null | grep docker.io`
+DOCKER=`apt list --installed 2>/dev/null | grep docker`
 
 if [[ ! `uname -r` =~ microsoft ]] \
-  && [ -z "$DOCKER" ]; then
+  && [ -z "$DOCKER" ] \
+  && [ -z "$IS_DOCKER" ]; then
     $FILE_DIR/tools/docker/install.sh
     echo "[+] Docker installed"
 fi
