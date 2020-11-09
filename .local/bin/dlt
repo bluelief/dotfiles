@@ -1,0 +1,31 @@
+#!/bin/bash
+
+DOCKER_USER="littlewitch"
+DOCKER_SCRIPT="--login"
+
+if [ $# == 1 ]; then
+  DOCKER_USER=$1
+fi
+
+if [  $# == 2 ]; then
+  DOCKER_USER=$1
+  DOCKER_SCRIPT=$2
+fi
+
+docker container run \
+  --net=stellvia \
+  -v $HOME/.gitconfig.user:/home/littlewitch/.gitconfig.user:ro \
+  -v package:/home/littlewitch/package \
+  -v develop:/home/littlewitch/dev \
+  -v local:/home/littlewitch/.local \
+  -v visualarts:/home/littlewitch/.visualarts \
+  -w /home/littlewitch \
+  -it --rm \
+  -e TZ=Asia/Tokyo \
+  -e TERM=xterm-256color \
+  -e IS_DOCKER=true \
+  --user $DOCKER_USER \
+  --name littlewitch \
+  --hostname academia \
+  littlewitch/dev:latest \
+  /bin/bash $DOCKER_SCRIPT

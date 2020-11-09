@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PYTHON_VER="3.8.5"
-GOPACKAGE="go1.15.2.linux-amd64.tar.gz"
-NODE_VER="14.10.1"
+PYTHON_VER="3.8.6"
+GOPACKAGE="go1.15.4.linux-amd64.tar.gz"
+NODE_VER="15.1.0"
 
 PREFIX=$HOME/.local/usr
 
@@ -56,7 +56,7 @@ r2pm update
 r2pm install r2ghidra-dec
 
 # setup metasploit
-git clone https://github.com/stellviaorg/metasploit-framework.git $HOME/package/security/metasploit-framework
+git clone https://github.com/littlewitchacademia/metasploit-framework.git $HOME/package/security/metasploit-framework
 cd $HOME/package/security/metasploit-framework
 git remote add upstream https://github.com/rapid7/metasploit-framework.git
 git fetch upstream

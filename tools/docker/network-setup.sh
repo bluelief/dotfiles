@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker network create -d bridge stellvia
+docker network create -d bridge littlewitch
 
