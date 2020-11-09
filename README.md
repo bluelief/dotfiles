@@ -10,9 +10,9 @@ export DOTFILES=$HOME/package/dotfiles \
     git \
     curl \
   && git clone https://github.com/bluelief/dotfiles.git $DOTFILES \
-  && $DOTFILES/unlink.sh  > /dev/null 2>&1 \
-  && $DOTFILES/setup.sh \
-  && $DOTFILES/install.sh \
+  && $($DOTFILES)/unlink.sh  > /dev/null 2>&1 \
+  && $($DOTFILES)/setup.sh \
+  && $($DOTFILES)/install.sh \
   && source $HOME/.bash_profile
 ```
 

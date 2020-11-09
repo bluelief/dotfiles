@@ -23,6 +23,8 @@ rm -f /tmp/$GOPACKAGE
 
 # setup python
 eval "$(pyenv init -)"
+mkdir -p $HOME/.local/lang/pyenv/plugins
+git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 pyenv install $PYTHON_VER
 pyenv global $PYTHON_VER
 pip install -U pip
@@ -30,13 +32,15 @@ pip install -U pip
 # setup ruby
 cd $HOME/.local/lang/rbenv && src/configure && make -C src
 mkdir -p $HOME/.local/lang/rbenv/plugins
-git clone https://github.com/rbenv/ruby-build.git $HOME/.local/lang/rbenv/plugins/ruby-build
-cd $HOME/.local/lang/nodenv && src/configure && make -C src
+git clone https://github.com/rbenv/ruby-build.git $(rbenv root)/plugins/ruby-build
+git clone https://github.com/rkh/rbenv-update.git $(rbenv root)/plugins/rbenv-update
 
 # setup node
 mkdir -p $HOME/.local/lang/nodenv/plugins
-git clone https://github.com/nodenv/node-build.git $HOME/.local/lang/nodenv/plugins/node-build
-git clone https://github.com/pine/nodenv-yarn-install.git $HOME/.local/lang/nodenv/plugins/nodenv-yarn-install
+cd $HOME/.local/lang/nodenv && src/configure && make -C src
+git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
+git clone https://github.com/pine/nodenv-yarn-install.git $(nodenv root)/plugins/nodenv-yarn-install
+git clone https://github.com/nodenv/nodenv-update.git $(nodenv root)/plugins/nodenv-update
 nodenv install $NODE_VER
 nodenv global $NODE_VER
 
