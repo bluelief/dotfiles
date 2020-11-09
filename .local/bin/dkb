@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_USER="stellvia"
+DOCKER_USER="littlewitch"
 DOCKER_SCRIPT="--login"
 
 if [ $# == 1 ]; then
@@ -13,18 +13,17 @@ if [  $# == 2 ]; then
 fi
 
 docker container run \
-  --net=stellvia \
-  -v kernel:/home/stellvia/kernel \
-  -v /tmp:/home/stellvia/tmp \
-  -w /home/stellvia \
+  --net=littlewitch \
+  -v kernel:/home/littlewitch/kernel \
+  -v /tmp:/home/littlewitch/tmp \
+  -w /home/littlewitch \
   -it --rm \
   -e TZ=Asia/Tokyo \
   -e TERM=xterm-256color \
   -e IS_DOCKER=true \
   --user $DOCKER_USER \
   --name kernel-build \
-  --hostname foundationII \
-  stellvia/ubuntu-kernelbuild:latest \
+  --hostname academia \
+  littlewitch/docker-kernelbuild:latest \
   /bin/bash $DOCKER_SCRIPT
-
 

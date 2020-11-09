@@ -13,7 +13,7 @@ if [  $# == 2 ]; then
 fi
 
 docker container run \
-  --net=stellvia \
+  --net=littlewitch \
   -v $HOME/.gitconfig.user:/home/littlewitch/.gitconfig.user:ro \
   -v package:/home/littlewitch/package \
   -v develop:/home/littlewitch/dev \
