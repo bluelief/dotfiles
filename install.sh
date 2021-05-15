@@ -31,12 +31,7 @@ if [ -z "$IS_DOCKER" ]; then
   setup-devtools
 fi
 
-# setup directory
-FILE_DIR=$(cd $(dirname $BASH_SOURCE); pwd)
-mkdir -p $HOME/.local/usr
-mkdir -p $HOME/.local/share/vimplug
-
-# dotfiledire
+# dotfile dir
 echo $(cd $(dirname $BASH_SOURCE); pwd) > $HOME/.local/.dotfiles
 
 # setup vim-plug

@@ -11,6 +11,11 @@ else
   ln -s $FILE_DIR/.bash_profile $HOME/.bash_profile
 fi
 
+mkdir -p $HOME/.local/usr
+mkdir -p $HOME/.local/share/vimplug
+mkdir -p $HOME/.visualarts/.ssh
+mkdir -p $HOME/.visualarts/.gnupg
+
 ln -s $FILE_DIR/.gitconfig $HOME/.gitconfig
 ln -s $FILE_DIR/.gitmessage $HOME/.gitmessage
 ln -s $FILE_DIR/.vimrc $HOME/.vimrc

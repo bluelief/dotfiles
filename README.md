@@ -1,4 +1,4 @@
-# Bluelief's dotfiles
+## Bluelief's dotfiles
 
 
 ## How to setup
@@ -17,5 +17,5 @@ $ ./unlink && ./install.sh && setup.sh
 ### License
 
 <sup>
-Licensed under [The Unlicense](LICENSE).
+Licensed under <a href="LICENSE">The Unlicense</a>.
 </sup>
