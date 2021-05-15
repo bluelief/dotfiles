@@ -57,7 +57,7 @@ alias gpm="git push origin master"
 alias gpf="git push -f"
 alias gpfm="git push -f origin master"
 alias gco="git checkout"
-alias gpat="git reset --hard HEAD^ && git am --3way ./patch/$@"
+gpta() { git reset --hard HEAD^ && git am --3way ./patch/$@ }
 alias gsign="gitsign"
 
 # kex

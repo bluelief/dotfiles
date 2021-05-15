@@ -42,6 +42,9 @@
 [tag]
   gpgSign = true
 
+[pull]
+  rebase = false
+
 [trailer "author"]
   key = "Co-authored-by: "
 
