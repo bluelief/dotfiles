@@ -1,47 +1,54 @@
 {
-  "workbench.colorTheme": "Dracula Soft",
-  "workbench.iconTheme": "material-icon-theme",
-  "files.eol": "\n",
-  "extensions.ignoreRecommendations": false,
-  "files.associations": {
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Night Owl",
+    "files.eol": "\n",
+    "extensions.ignoreRecommendations": false,
+    "editor.fontSize": 18,
+    "files.associations": {
       "*.tpl": "html",
       "*.vue": "javascript",
-      "*.tsx": "javascript",
+      "*.ts": "typescript",
+      "*.tsx": "typescriptreact",
       ".bash*": "shellscript",
-      ".gitconfig*": "shellscript",
-  },
-
-  "[javascript]": {
+      ".gitconfig*": "shellscript"
+    },
+    "[javascript]": {
       "editor.tabSize": 2
-  },
-  "[html]": {
+    },
+    "[typescirpt]": {
       "editor.tabSize": 2
-  },
-  "[css]": {
+    },
+    "[typescirptreact]": {
       "editor.tabSize": 2
-  },
-  "[python]": {
+    },
+    "[html]": {
+      "editor.tabSize": 2
+    },
+    "[css]": {
+      "editor.tabSize": 2
+    },
+    "[python]": {
       "editor.tabSize": 4
-  },
-  "[rust]": {
+    },
+    "[rust]": {
       "editor.tabSize": 4
-  },
-  "[shellscript]": {
+    },
+    "[shellscript]": {
       "editor.tabSize": 2
-  },
-  "[go]": {
+    },
+    "[go]": {
       "editor.tabSize": 4,
       "editor.insertSpaces": false
-  },
-  "[Makefile]": {
+    },
+    "[Makefile]": {
       "editor.tabSize": 4,
       "editor.insertSpaces": false
-  },
-  "editor.fontSize": 20,
-  "editor.tabSize": 2,
-  "editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
-  "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.fontSize": 20,
-  "javascript.validate.enable": false,
+    },
+    "editor.fontFamily": "'FiraCode NF', 'Noto Sans CJK JP', 'Cascadia Code', Consolas, 'Courier New', monospace",
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.fontSize": 14,
+    "javascript.validate.enable": false,
+    "remote.SSH.remotePlatform": {
+      "debian": "linux"
+    }
 }

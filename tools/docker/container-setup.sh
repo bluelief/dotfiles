@@ -43,33 +43,3 @@ git clone https://github.com/pine/nodenv-yarn-install.git $(nodenv root)/plugins
 git clone https://github.com/nodenv/nodenv-update.git $(nodenv root)/plugins/nodenv-update
 nodenv install $NODE_VER
 nodenv global $NODE_VER
-
-# setup nmap
-git clone https://github.com/nmap/nmap.git $HOME/package/security/nmap
-cd $HOME/package/security/nmap
-./configure --prefix=$PREFIX
-make
-make install
-
-# setup radare2
-git clone https://github.com/radareorg/radare2 $HOME/package/security/radare2
-cd $HOME/package/security/radare2
-sys/user.sh --install-path $PREFIX
-r2pm init
-r2pm update
-r2pm install r2ghidra-dec
-
-# setup metasploit
-git clone https://github.com/littlewitchacademia/metasploit-framework.git $HOME/package/security/metasploit-framework
-cd $HOME/package/security/metasploit-framework
-git remote add upstream https://github.com/rapid7/metasploit-framework.git
-git fetch upstream
-git checkout -b upstream-master --track upstream/master
-ln -sf tools/dev/pre-commit-hook.rb .git/hooks/pre-commit
-ln -sf tools/dev/pre-commit-hook.rb .git/hooks/post-merge
-rbenv install $(cat .ruby-version)
-rbenv global $(cat .ruby-version)
-eval "$(rbenv init -)"
-gem install bundler
-cd .
-bundle install

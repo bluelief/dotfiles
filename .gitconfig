@@ -39,6 +39,9 @@
   gpgsign = true
   template = ~/.gitmessage
 
+[tag]
+  gpgSign = true
+
 [trailer "author"]
   key = "Co-authored-by: "
 

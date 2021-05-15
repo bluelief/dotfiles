@@ -1,28 +1,21 @@
-Bluelief's dotfiles
+# Bluelief's dotfiles
 
-```sh
-export DOTFILES=$HOME/package/dotfiles \
-  && mkdir -p $HOME/.local \
-  && echo $DOTFILES > $HOME/.local/.dotfiles \
-  && sudo apt update \
-  && sudo apt upgrade \
-  && sudo apt -y install \
-    git \
-    curl \
-  && git clone https://github.com/bluelief/dotfiles.git $DOTFILES \
-  && $($DOTFILES)/unlink.sh  > /dev/null 2>&1 \
-  && $($DOTFILES)/setup.sh \
-  && $($DOTFILES)/install.sh \
-  && source $HOME/.bash_profile
+
+## How to setup
+
+```shell
+$ sudo apt update && sudo apt -y upgrade
+$ sudo apt install git curl
+$ mkdir $HOME/package
+$ cd $HOME/package
+$ git clone https://github.com/bluelief/dotfiles.git
+$ cd dotfiles
+$ ./unlink && ./install.sh && setup.sh
 ```
 
 
-```sh
-curl https://raw.githubusercontent.com/bluelief/dotfiles/master/setup.sh -sSf | bash > /dev/null 2>&1
-```
+### License
 
-
-## License
-
+<sup>
 Licensed under [The Unlicense](LICENSE).
-
+</sup>

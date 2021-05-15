@@ -1,12 +1,13 @@
-#update
+#!/bin/bash
+# update
 alias dotup="`cat $HOME/.local/.dotfiles`/update.sh && . $HOME/.bash_profile"
 
-# alias
+# global
+alias sudo='sudo '
+alias dotfiles='cd $HOME/package/dotfiles'
 alias lstat="stat --format='%a %A %10U %10G %20F %n' ./* .*"
 alias lstats="stat --printf='%a %A %10U %10G %20F %n\n'"
 alias lgrep="stat --format='%a %A %10U %10G %20F %n' ./* .* | grep"
-alias pwdc='pwd | tr -d "\n" | pbcopy'
-alias allps="ps aux"
 
 # docker
 alias dc="docker-compose"
@@ -27,9 +28,11 @@ alias dv="docker volume"
 alias dvl="docker volume ls"
 alias dl="docker logs"
 
+# ps
+alias psa="ps aux"
+
 # ls
-alias ls="ls --color=auto"
-alias ll="ls -alF"
+alias lla='ls -la'
 alias l="clear && ll"
 
 # cd
@@ -37,15 +40,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ~="cd ~"
-alias dotfiles="cd `cat $HOME/.local/.dotfiles`"
-
-# cp/mv/rm
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
-
-# VSCode
-alias vscode="code-insiders ."
 
 # tar
 alias tarxz="tar Jxf"
@@ -66,21 +60,59 @@ alias gco="git checkout"
 alias gpat="git reset --hard HEAD^ && git am --3way ./patch/$@"
 alias gsign="gitsign"
 
+# kex
+# Seamless mode, Enhanced session mode, Window mode
+alias kexsl="kex --sl"
+alias kexesm="kex --esm"
+alias kexwin="kex --win"
+
 # gpg
 ## Expire
 ## gedit XXXX
 ## key YYYY(Sub key)
 ## expire
 ## save
-alias glist="gpg --list-keys --keyid-format LONG"
-alias gedit="gpg --expert --edit-key"
-alias ggen="gpg --expert --full-gen-key"
-alias ggrip="gpg --with-keygrip --list-key"
+#
+## gpg --with-keygrip --list-key
+## rm ~/.gnupg/private-keys-v1.d/{keygrip}.key
+alias gplist="gpg --list-keys --keyid-format LONG"
+alias gpedit="gpg --expert --edit-key"
+alias gpgen="gpg --expert --full-gen-key"
+alias gprip="gpg --with-keygrip --list-key"
+alias gpexp="gpg --armor --export"
+alias gpexpsec="gpg --export-secret-key"
+gprm() { rm ~/.gnupg/private-keys-v1.d/$1.key; }
 
-# python venv
+# ssh
+alias sshgen="ssh-keygen -t ed25519 -C"
+
+# ctf
+alias htb='sudo -b openvpn $HOME/.local/bin/Bluelief.ovpn'
+alias khtb='sudo kill $(ps -aux | grep openvpn | awk "{print $1}")'
+
+# python3
+alias venv='source $HOME/.local/venv/dev/bin/activate'
 alias von=". bin/activate"
-alias voff="deactivate"
-alias vdev=". .local/share/venv/dev/bin/activate"
+alias voff='deactivate'
+
+# python2
+alias venv2='source $HOME/.local/venv/dev2/bin/activate'
+
+# rust
+alias cargo='docker run --rm --user $(id -u):$(id -g) --env PATH=/home/rust/.cargo/bin:$PATH -v $HOME/.cargo/registry:/home/rust/.cargo/registry -v $HOME/.cargo/credentials:/home/rust/.cargo/credentials -v $PWD:/tmp/dev -w /tmp/dev rust:latest cargo'
+alias rustc='docker run --rm --user $(id -u):$(id -g) --env PATH=/home/rust/.cargo/bin:$PATH -v $HOME/.cargo/registry:/home/rust/.cargo/registry -v $HOME/.cargo/credentials:/home/rust/.cargo/credentials -v $PWD:/tmp/dev -w /tmp/dev rust:latest rustc'
+cargobin() {
+  git clone git@github.com:bluelief/rust-template.git ./$1;
+  cd $1;
+  rm -rf .git;
+  git init;
+  git commit --allow-empty -m 'Init commit';
+  grep -rl 'rust-template' . | xargs sed -i -e "s/rust-template/$1/g";
+}
+
+# python
+alias py="docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":"$PWD" -w "$PWD" python:3.9-slim-buster python"
+alias pi="docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":"$PWD" -w "$PWD" python:3.9-slim-buster pip"
 
 # alphabet
 alias a="apt"

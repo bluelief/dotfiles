@@ -4,7 +4,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
-set paste
 
 set title
 
@@ -26,9 +25,9 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
   autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.rs setlocal tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd BufNewFile,BufRead *.c setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead *.cc setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead *.h setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.c setlocal tabstop=8 softtabstop=8 shiftwidth=8
+  autocmd BufNewFile,BufRead *.cc setlocal tabstop=8 softtabstop=8 shiftwidth=8
+  autocmd BufNewFile,BufRead *.h setlocal tabstop=8 softtabstop=8 shiftwidth=8
   autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -40,6 +39,7 @@ augroup fileTypeIndent
   autocmd BufRead,BufNewFile * nested if @% == '\.' | set filetype=bash | endif
   autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*python.*' | set filetype=python | endif
   autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!.*ruby.*' | set filetype=ruby | endif
+  autocmd BufRead,BufNewFile * nested if @% !~ '\.' && getline(1) == '^#!/bin/zsh.*' | set filetype=bash | endif
 augroup END
 
 
@@ -59,7 +59,6 @@ if &term =~ "xterm"
   cnoremap <special> <Esc>[200~ <nop>
   cnoremap <special> <Esc>[201~ <nop>
 endif
-
 
 " vim-plug
 call plug#begin('~/.vim/plugged')

@@ -27,6 +27,5 @@ function prompt () {
   return " "
 }
 $Env:VIRTUAL_ENV_DISABLE_PROMPT = 1
-Invoke-Expression "D:\dev\bluelief\venv\dev\Scripts\Activate.ps1"
-Set-Location "D:\dev\bluelief"
-
+Invoke-Expression "$env:USERPROFILE\venv\dev\Scripts\Activate.ps1"
+Set-Location "$env:USERPROFILE"

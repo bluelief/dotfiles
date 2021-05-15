@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# path to little scripts
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/usr/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH=$HOME/dotfiles/bin:$PATH
+
+# default editor
+export EDITOR='vim'
+
+# openssl
+export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
+export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+
+# postgresql
+export PATH="/usr/lib/postgresql/12/bin:$PATH"
+
+# VSCode
+export PATH="/mnt/d/Program/application/Microsoft VS Code Insiders/bin:$PATH"
+
+# gpg git
+export GPG_TTY=$(tty)
